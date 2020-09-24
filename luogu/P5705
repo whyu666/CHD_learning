@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	double a,now;
+	int bai,shi,ge;
+	cin>>a;
+	bai=a/100;
+	now=a-bai*100;
+	shi=now/10;
+	now=now-shi*10;
+	ge=now/1;
+	now=now-ge;
+	cout<<(now*10)<<"."<<ge<<shi<<bai;
+	return 0;
+}
