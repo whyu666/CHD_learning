@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int k,i=2;
+	double s=1;
+	cin>>k;
+	while(1)
+	{
+		s=s+(1.0/i);
+		if(s>k)
+		{
+			break;
+		}
+		i++;
+	}
+	cout<<i;
+	return 0;
+}
