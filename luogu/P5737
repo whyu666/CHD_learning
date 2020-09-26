@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main() 
+{
+	bool a[5000];
+	int i;
+	for(i=1582;i<=3000;i++)
+	{
+		a[i]=false;
+		if(i%4==0)
+		{
+			a[i]=true;
+		}
+		if(i%100==0)
+		{
+			a[i]=false;
+		}
+		if(i%400==0)
+		{
+			a[i]=true;
+		}
+	}
+	int m,n,num=0;
+	cin>>m>>n;
+	for(i=m;i<=n;i++)
+	{
+		if(a[i]==true)
+		{
+			num++;
+		}
+	}
+	cout<<num<<endl;
+	for(i=m;i<=n;i++)
+	{
+		if(a[i]==true)
+		{
+			cout<<i<<" ";
+		}
+	}
+	return 0;
+}
