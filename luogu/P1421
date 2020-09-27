@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main() 
+{
+	long long int a,b;
+	cin>>a>>b;
+	double c;
+	c=a+0.1*b;
+	cout<<int(c/1.9);
+	return 0;
+}
