@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+using namespace std;
+int main() 
+{
+	char a[150];
+	cin>>a;
+	int i,len;
+	len=strlen(a);
+	for(i=0;i<len;i++)
+	{
+		if(a[i]>=97&a[i]<=122)
+		{
+			a[i]-=32;
+		} 
+	}
+	for(i=0;i<len;i++)
+	{
+		cout<<a[i];
+	}
+	return 0;
+}
