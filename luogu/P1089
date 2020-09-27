@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+using namespace std;
+int main() 
+{
+	int a[20],i,b=0,c=0,t;
+	bool flag=true;
+	for(i=1;i<=12;i++)
+	{
+		cin>>a[i];
+	}
+	for(i=1;i<=12;i++)
+	{
+		b=b+300-a[i];
+		if(b<0)
+		{
+			cout<<"-"<<i;
+			flag=false;
+			break;
+		}
+		if(b>100|b==100)
+		{
+			t=b%100;
+			c+=(b-t);
+			b=t;
+		}
+	}
+	if(flag==true)
+	{
+		cout<<b+c*1.2;
+	}
+	return 0;
+}
