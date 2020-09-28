@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+using namespace std;
+int main() 
+{
+	int n;
+	cin>>n;
+	double s;
+	if(n<=150)
+	{
+		s=0.4463*n;
+	}
+	if(n>150&&n<=400)
+	{
+		s=66.945+(n-150)*0.4663;
+	}
+	if(n>400)
+	{
+		s=183.52+(n-400)*0.5663;
+	}
+	cout<<setiosflags(ios::fixed)<<setprecision(1)<<s;
+	return 0;
+}
