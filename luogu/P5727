@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	long long int a;
+	cin>>a;
+	int i=1,b[100000];
+	b[0]=a;
+	while(a!=1)
+	{
+		if(a%2==0)
+		{
+			a/=2;
+		}
+		else
+		{
+			a=a*3+1;
+		}
+		b[i]=a;
+		i++;
+	}
+	for(int j=i-1;j>=0;j--)
+	{
+		cout<<b[j]<<" ";
+	}
+	return 0;
+}
