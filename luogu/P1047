@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int l,m,a[110][3],i,s=0;
+	cin>>l>>m;
+	bool flag[l+10];
+	for(i=0;i<=l;i++)
+	{
+		flag[i]=true;
+	}
+	for(i=1;i<=m;i++)
+	{
+		cin>>a[i][1]>>a[i][2];
+	}
+	for(i=1;i<=m;i++)
+	{
+	    for(int j=a[i][1];j<=a[i][2];j++)
+	    {
+	    	flag[j]=false;
+		  }
+	}
+	for(i=0;i<=l;i++)
+	{
+		if(flag[i]==true)
+		{
+			s++;
+		}
+	}
+	cout<<s;
+	return 0;
+}
