@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n,i=1,j,gs,k=1;
+	cin>>n;
+	int a[(n+3)*(n+3)],s=0,b[50000];
+	while(s<n*n)
+	{
+		cin>>b[i];
+		s+=b[i];
+		i++;
+	}
+	gs=i;
+	for(i=1;i<=gs;i++)
+	{
+		for(j=1;j<=b[i];j++)
+		{
+			if(i%2==1)
+			{
+				a[k]=0;
+			}
+			else
+			{
+				a[k]=1;
+			}
+			k++;
+		}
+	}
+	k=1;
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=n;j++)
+		{
+			cout<<a[k];
+			k++;
+		}
+		cout<<endl;
+	}
+	return 0;
+}
