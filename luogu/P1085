@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a[10][5],i,j,t=0,m;
+	bool flag=true;
+	for(i=1;i<=7;i++)
+	{
+		for(j=1;j<=2;j++)
+		{
+			cin>>a[i][j];
+		}
+	}
+	for(i=1;i<=7;i++)
+	{
+		if(a[i][1]+a[i][2]>8)
+		{
+			flag=false;
+			if(a[i][1]+a[i][2]>t)
+			{
+				t=a[i][1]+a[i][2];
+				m=i;
+			}
+		}
+	}
+	if(flag)
+	{
+		cout<<0;
+	}
+	else
+	{
+		cout<<m;
+	}
+	return 0;
+}
