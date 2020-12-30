@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+	char a[20];
+	cin>>a;
+	int i,b[20],s=0;
+	char ss; 
+	b[1]=int(a[0])-48;
+	b[2]=int(a[2])-48;
+	b[3]=int(a[3])-48;
+	b[4]=int(a[4])-48;
+	b[5]=int(a[6])-48;
+	b[6]=int(a[7])-48;
+	b[7]=int(a[8])-48;
+	b[8]=int(a[9])-48;
+	b[9]=int(a[10])-48;
+	b[10]=int(a[12])-48;
+	for(i=1;i<=9;i++)
+	{
+		s+=b[i]*i;
+	}
+	s=s%11;
+	if(s==b[10]||(a[12]=='X'&&(s==10)))
+	{
+		cout<<"Right";
+	}
+	else
+	{
+		for(i=0;i<=10;i++)
+		{
+			cout<<a[i];
+		}
+		cout<<"-";
+		if(s!=10)
+		{
+			cout<<s;
+		}
+		else
+		{
+			cout<<"X";
+		}
+	}
+	return 0;
+}
